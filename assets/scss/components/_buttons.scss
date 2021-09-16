@@ -1,0 +1,29 @@
+/*==========BUTTONS START==========*/
+
+.btn-outline-sign{
+    background-color: transparent;
+    color: $primary-color ;
+    border: 1px solid;
+    transition: all.5s ease-in;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-size: 16px;
+
+    &:hover{
+        background-color: $sidebar-color;
+        color: $base-color;
+    }
+  
+}
+
+.btn-exit{
+    // position: absolute;
+    // bottom: 0;
+    font-size: 16px;
+    width: 100%;
+    padding: 15px 30px;
+    font-weight: 700;
+    text-align: left;
+    border: none;
+}
+/*==========BUTTONS END==========*/

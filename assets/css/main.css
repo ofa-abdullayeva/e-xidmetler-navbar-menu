@@ -1,0 +1,349 @@
+/*Variables*/
+/*Mixins*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container-fluid {
+  padding: 0;
+  background-color: #164a9f;
+}
+
+/*==========BUTTONS START==========*/
+.btn-outline-sign {
+  background-color: transparent;
+  color: #164a9f;
+  border: 1px solid;
+  transition: all 0.5s ease-in;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.btn-outline-sign:hover {
+  background-color: #063146;
+  color: #f1f1f1;
+}
+
+.btn-exit {
+  font-size: 16px;
+  width: 100%;
+  padding: 15px 30px;
+  font-weight: 700;
+  text-align: left;
+  border: none;
+}
+
+/*==========BUTTONS END==========*/
+/*========== Box  Start==========*/
+.boxes {
+  display: flex;
+  width: 100%;
+}
+
+.boxes .boxes-left, .boxes .boxes-right {
+  width: 50%;
+}
+
+.boxes .box {
+  position: relative;
+  margin: 10px 5px;
+}
+
+.boxes .box .box-content {
+  width: 100%;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+}
+
+.boxes .box .box-content h5 {
+  margin: 0;
+  padding: 10px;
+  font-weight: normal;
+}
+
+.boxes .box .box-content h5 a {
+  color: #333;
+}
+
+.boxes .box .box-content:hover {
+  background-color: #164a9f;
+  transition: all .5s ease-in;
+}
+
+.boxes .box .box-content:hover h5 a {
+  color: white;
+}
+
+.boxes .box .box-content .icon {
+  padding: 10px;
+  background-color: #164a9f;
+  border-radius: 50%;
+  color: #f1f1f1;
+  font-size: 15px;
+}
+
+.boxes .box .sub {
+  position: absolute;
+  right: 30px;
+  bottom: .5px;
+  width: 100px;
+  height: 30px;
+  background-color: #f1f1f1;
+  display: none;
+  border-radius: 5px;
+}
+
+.boxes .box .sub .sub-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+}
+
+.boxes .box .sub .sub-menu a {
+  font-size: 15px;
+  padding: 3px 3px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #164a9f;
+}
+
+.boxes .box .sub .sub-menu a:hover {
+  background-color: #164a9f;
+  color: white;
+}
+
+.boxes .box .sub .sub-menu .content {
+  font-size: 10px;
+  z-index: 100;
+  padding: 5px;
+  position: absolute;
+  top: 32px;
+  width: 140px;
+  background-color: #063146;
+  color: white;
+  text-align: center;
+  display: none;
+}
+
+.boxes .box .sub-active {
+  display: block !important;
+}
+
+.boxes .box .bars {
+  font-size: 25px;
+  margin: 3px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.boxes .box:hover a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxes .boxes-left, .boxes .boxes-right {
+    width: 100%;
+  }
+}
+
+/*========== Box  End ==========*/
+/*==========HEADER START==========*/
+header .header-top {
+  display: flex;
+  margin: 20px auto;
+}
+
+header .header-top .description {
+  margin-left: 100px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+header .header-top h3 a {
+  font-size: 26px;
+  font-weight: 700;
+  color: #164a9f;
+  transition: all .5s ease-in;
+}
+
+header .header-main ul {
+  display: flex;
+  margin-bottom: 0;
+}
+
+header .header-main ul li {
+  padding: 15px;
+}
+
+header .header-main ul li:hover {
+  background-color: #062738;
+}
+
+header .header-main .container {
+  border-radius: 5px;
+}
+
+header .header-main a {
+  font-size: 18px;
+  color: white;
+}
+
+/*==========HEADER END==========*/
+/*==========Main START==========*/
+main {
+  margin-bottom: 50px;
+}
+
+main .sidenav-description {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  z-index: 1000;
+  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.5);
+  background-color: #063146;
+  color: #333;
+  transition: all .5s ease-in;
+  overflow: scroll;
+}
+
+main .sidenav-description h1 {
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  padding: 15px;
+  color: white;
+}
+
+main .sidenav-description ul li span {
+  position: absolute;
+  right: 10px;
+  transition: all .5s ease-in;
+}
+
+main .sidenav-description ul li:hover {
+  background-color: rgba(22, 74, 159, 0.2);
+}
+
+main .sidenav-description ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 50px;
+  font-size: 20px;
+  color: white;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-top: 1px solid #164a9f;
+  border-bottom: 1px solid #164a9f;
+  transition: all .5s ease-in;
+  text-decoration: none;
+}
+
+main .sidenav-description ul ul {
+  background-color: #063146;
+  width: 300px;
+}
+
+main .sidenav-description ul ul li {
+  background-color: #054768;
+  margin-left: 5px;
+}
+
+main .sidenav-description ul ul li a {
+  font-size: 15px;
+  line-height: 30px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+main .sidenav-description ul ul li:hover {
+  background-color: #062738;
+}
+
+main .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 12px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+main .information .post-title h1 {
+  font-size: 33px;
+}
+
+main .information .post-description p {
+  font-size: 16px;
+  padding: 20px 0;
+}
+
+main .information .services {
+  display: flex;
+  flex-direction: column;
+}
+
+main .information .services h2 {
+  margin: 30px auto;
+  font-size: 30px;
+  color: #5a5757;
+}
+
+main .information .services li a {
+  font-size: 15px;
+}
+
+main .active {
+  left: 0;
+}
+
+/*==========MAIN END==========*/
+/*==========FOOTER START==========*/
+footer {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #f1f1f1;
+  color: #164a9f;
+}
+
+footer span {
+  color: #164a9f;
+}
+
+footer .bg-bottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #164a9f;
+}
+
+/*==========FOOTER END==========*/
