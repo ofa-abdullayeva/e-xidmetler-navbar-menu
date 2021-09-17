@@ -6,7 +6,8 @@ const contents = document.querySelectorAll('.content');
 
 boxes.forEach(element=>{
 
-	let elementBars = element.children[0].childNodes[5]	
+	let elementBars = element.children[0].children[1]
+	console.log(elementBars);
 	let elementSub = element.children[1]
 
 	elementBars.addEventListener("mouseover",()=>{

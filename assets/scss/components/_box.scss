@@ -12,6 +12,7 @@
     .box{
         position: relative;
         margin: 10px 5px;
+        
         .box-content{
             width: 100%;
             height: 80px;
@@ -23,6 +24,11 @@
             padding: 10px;
             background-color: white;
 
+            .content{
+                display: flex;
+                align-items: center;
+            }
+
             h5{
             
                 margin: 0;
@@ -32,6 +38,7 @@
     
                 a{
                     color: $secondary;
+                    align-content: flex-start;
                 }
         
             }
@@ -55,7 +62,7 @@
                 background-color: $primary-color;
                 border-radius: 50%;
                 color: $base-color;
-                font-size: 15px;
+                font-size: 10px;
               
             }
        
@@ -115,6 +122,7 @@
         .bars {
             font-size: 25px;
             margin: 3px;
+          
             text-align: center;
             border-radius: 50%;
             

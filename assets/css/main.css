@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -78,6 +78,11 @@ body {
   background-color: white;
 }
 
+.boxes .box .box-content .content {
+  display: flex;
+  align-items: center;
+}
+
 .boxes .box .box-content h5 {
   margin: 0;
   padding: 10px;
@@ -86,6 +91,7 @@ body {
 
 .boxes .box .box-content h5 a {
   color: #333;
+  align-content: flex-start;
 }
 
 .boxes .box .box-content:hover {
@@ -102,7 +108,7 @@ body {
   background-color: #164a9f;
   border-radius: 50%;
   color: #f1f1f1;
-  font-size: 15px;
+  font-size: 10px;
 }
 
 .boxes .box .sub {
@@ -180,7 +186,7 @@ body {
 /*==========HEADER START==========*/
 header .header-top {
   display: flex;
-  margin: 20px  auto;
+  margin: 10px  auto;
 }
 
 header .header-top .description {
@@ -340,10 +346,6 @@ main .sidenav .closebtn {
   margin-left: 50px;
 }
 
-main .information .post-title h1 {
-  font-size: 33px;
-}
-
 main .information .post-description p {
   font-size: 16px;
   padding: 20px 0;
@@ -355,8 +357,8 @@ main .information .services {
 }
 
 main .information .services h2 {
-  margin: 30px auto;
-  font-size: 30px;
+  margin: 30px 0;
+  font-size: 22px;
   color: #5a5757;
 }
 
@@ -383,7 +385,7 @@ main .active {
 /*==========MAIN END==========*/
 /*==========FOOTER START==========*/
 footer {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
   background-color: #f1f1f1;
   color: #164a9f;
