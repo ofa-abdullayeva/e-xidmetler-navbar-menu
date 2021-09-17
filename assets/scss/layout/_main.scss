@@ -1,6 +1,6 @@
 /*==========Main START==========*/
 main{
-    margin-bottom: 50px;
+   
     .sidenav{
         
         &-description{
@@ -112,7 +112,9 @@ main{
     }
 
     .information{
+      
         .post-title{
+          
             h1{
                 font-size: 33px;
             }
@@ -148,6 +150,33 @@ main{
 
     .active{
         left: 0;
+    }
+
+    @media (min-width: 320px) and (max-width: 800px) {
+       
+        .information{
+            .post-description{
+                p{
+                    font-size: 14px;
+                }
+            }
+
+            .services{
+                
+                h2{
+                    font-size: 18px;
+                }
+                h5{
+                    a{
+                        font-size: 12px;
+                    }
+                }
+            
+                
+            }
+            
+        }
+        
     }
   
 }

@@ -180,11 +180,11 @@ body {
 /*==========HEADER START==========*/
 header .header-top {
   display: flex;
-  margin: 20px auto;
+  margin: 20px  auto;
 }
 
 header .header-top .description {
-  margin-left: 100px;
+  margin-left: 50px;
   margin-top: 20px;
   align-items: center;
 }
@@ -198,15 +198,24 @@ header .header-top h3 a {
 
 header .header-main ul {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin-bottom: 0;
 }
 
 header .header-main ul li {
   padding: 15px;
+  transition: all .5s ease-in;
 }
 
 header .header-main ul li:hover {
-  background-color: #062738;
+  background-color: #042174;
+  border-bottom: 3px solid;
+}
+
+header .header-main ul .active {
+  background-color: #042174;
+  border-bottom: 3px solid;
 }
 
 header .header-main .container {
@@ -218,12 +227,43 @@ header .header-main a {
   color: white;
 }
 
-/*==========HEADER END==========*/
-/*==========Main START==========*/
-main {
-  margin-bottom: 50px;
+header .header-main .show {
+  display: none;
 }
 
+@media (min-width: 320px) and (max-width: 800px) {
+  header .header-top h3 a {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  header .header-main {
+    width: 100%;
+    height: 100%;
+  }
+  header .header-main ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  header .header-main ul .active {
+    display: none;
+  }
+  header .header-main .show {
+    display: block;
+  }
+}
+
+@media (min-width: 800px) {
+  header .header-main ul li {
+    padding: 8px;
+  }
+  header .header-main ul li a {
+    font-size: 15px;
+  }
+}
+
+/*==========HEADER END==========*/
+/*==========Main START==========*/
 main .sidenav-description {
   position: fixed;
   top: 0;
@@ -326,6 +366,18 @@ main .information .services li a {
 
 main .active {
   left: 0;
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+  main .information .post-description p {
+    font-size: 14px;
+  }
+  main .information .services h2 {
+    font-size: 18px;
+  }
+  main .information .services h5 a {
+    font-size: 12px;
+  }
 }
 
 /*==========MAIN END==========*/
