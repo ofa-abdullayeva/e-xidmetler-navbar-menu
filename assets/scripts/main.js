@@ -63,10 +63,14 @@ subName.forEach(element=>{
 
 
 //------------- SIDEBAR MENU START --------------//
-
+const menu = document.querySelector(".menu");
+console.log(menu)
  function openNav() {
-	document.querySelector(".menu").classList.add("active");
+	// document.querySelector(".menu").classList.add("banner");
 	// document.getElementById("mySidenav").classList.add("active");
+	const menu = document.querySelector(".menu");
+	menu.classList.toggle("active")
+	console.log(menu)
 
  }
 

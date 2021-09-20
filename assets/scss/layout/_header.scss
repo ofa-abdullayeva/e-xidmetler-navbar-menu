@@ -1,7 +1,6 @@
 /*==========HEADER START==========*/
 header {
-	// position: fixed;
-	// top: 0;
+	
 
 	.header-top{
 		display: flex;
@@ -29,7 +28,7 @@ header {
 	}
 
 	.header-main{
-
+		display: flex;
 		ul{
 			display: flex;
 			justify-content: space-around;
@@ -38,67 +37,110 @@ header {
 			li{
 				padding: 15px;
 				transition:  all .5s ease-in;
+				border-radius: 5px;
 				
 
 				&:hover{
 					background-color: #042174;
-					border-bottom: 3px solid ;
+					// border-bottom: 3px solid ;
+					// border: 1px solid #f1f1f1;
+					
 					
 				}
 			}
 			.active{
 				background-color: #042174;
-				border-bottom: 3px solid ;
+				border-radius: 5px;
+				// border: 1px solid #f1f1f1;
+				// border-radius: 10px;
 			}
 
-			// .banner{
-			// 	display: flex;
-			// 	flex-direction: column;
-			// }
 		}
-		.container{
-			
-			border-radius: 5px;
-		}
+	
 		a{
-			font-size: 18px;
+			font-size: 20px;
 			color: white;
 		}
 		.show{
+			
 			display: none;
+			
 		}
 	}
-	@media (min-width: 320px) and (max-width: 800px) {
-		.header-top{
-			h3{
-			
+	@media (max-width: 1048px){
+		.header-main{
+			ul{
 				a{
-					font-size: 20px;
-					font-weight: 700;
-					
+					font-size: 12px;
 				}
-				
 			}
 		}
+	}
+
+	@media (max-width: 909px){
 		.header-main{
-			width: 100%;
-			height: 100%;
-			ul{
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-start;
-			
-				.active{
-					display: none;
-				}
-			}
+			margin: 100px auto;
 			.show{
 				display: block;
 			}
+			ul{
+				padding: 50px;
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 100vh;
+				width: 100%;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				background-color: $primary-color;
+				z-index: 100;
+
+				li{
+					padding: 5px;
+					a{
+						font-size: 18px;
+						padding: 5px;
+						// background-color: #042174;
+						// border-bottom: 3px solid ;
+					}
+				}
+			
+			}
 		}
-		
-		
 	}
+
+	// @media (min-width: 300px) and (max-width: 800px) {
+	// 	.header-top{
+	// 		h3{
+			
+	// 			a{
+	// 				font-size: 20px;
+	// 				font-weight: 700;
+					
+	// 			}
+				
+	// 		}
+	// 	}
+	// 	.header-main{
+	// 		width: 100%;
+	// 		height: 100%;
+	// 		ul{
+	// 			display: block;
+	// 			flex-direction: column;
+	// 			justify-content: flex-start;
+			
+	// 			.active{
+	// 				display: none !important;
+	// 			}
+	// 		}
+	// 		.show{
+	// 			display: block;
+	// 		}
+	// 	}
+		
+		
+	// }
 
 	@media (min-width: 800px){
 		.header-main{
